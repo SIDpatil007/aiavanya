@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AVANYA AI Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #2c3e50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    body.dark-mode {
+      background-color: #1e1e2e;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      padding: 20px;
+    }
+
+    .logo .icon {
+      font-size: 48px;
+    }
+
+    .logo h1 {
+      font-size: 32px;
+      margin-top: 10px;
+    }
+
+    .logo p {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+
+    .login-buttons {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .login-button {
+      text-decoration: none;
+      background-color: #3498db;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .login-button span {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .login-button:hover {
+      background-color: #2980b9;
+      transform: scale(1.02);
+    }
+
+    .login-button::after {
+      content: "";
+      position: absolute;
+      background: rgba(255, 255, 255, 0.4);
+      width: 100px;
+      height: 100px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      transition: transform 0.5s ease;
+      z-index: 0;
+    }
+
+    .login-button:active::after {
+      transform: translate(-50%, -50%) scale(3);
+    }
+
+    .language {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+
+    .dark-toggle {
+      margin-top: 20px;
+      background: #2c3e50;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dark-mode .login-button {
+      background-color: #576574;
+    }
+
+    .dark-mode .login-button:hover {
+      background-color: #3b3b54;
+    }
+
+    .dark-mode .language {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="logo">
+      <div class="icon">🧠</div>
+      <h1>AVANYA AI</h1>
+      <p>Empowering Education with Intelligence</p>
+    </header>
+
+    <section class="login-buttons">
+      <a href="Dashboard.html?role=admin&id=admin01" class="login-button"><span>🔒</span> Login as Admin</a>
+      <a href="Dashboard.html?role=teacher&id=teacher01" class="login-button"><span>👨‍🏫</span> Login as Teacher</a>
+      <a href="Dashboard.html?role=student&id=student01" class="login-button"><span>👩‍🎓</span> Login as Student</a>
+      <a href="Dashboard.html?role=parent&id=parent01" class="login-button"><span>👨‍👩‍👧</span> Login as Parent</a>
+    </section>
+
+    <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <footer class="language">🌐 Language: English</footer>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
